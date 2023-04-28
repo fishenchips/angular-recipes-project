@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipes-project';
-  section: string;
+  section: string = 'recipes';
 
   onClickHeader(section: string) {
     this.section = section;
