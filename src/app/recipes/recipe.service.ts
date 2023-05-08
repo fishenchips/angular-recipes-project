@@ -1,6 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,14 +11,26 @@ export class RecipeService {
 
   private recipes: Array<Recipe> = [
     new Recipe(
-      'Pizza1',
+      'Vesuvio',
       'Its yummy',
-      'https://emvwr2994ad.exactdn.com/wp-content/uploads/2021/10/bast-finpizza-stockholm.jpg?strip=all&lossy=1&quality=77&resize=795%2C480&ssl=1'
+      'https://emvwr2994ad.exactdn.com/wp-content/uploads/2021/10/bast-finpizza-stockholm.jpg?strip=all&lossy=1&quality=77&resize=795%2C480&ssl=1',
+      [
+        new Ingredient('Tomato sauce', 5),
+        new Ingredient('Ham', 3),
+        new Ingredient('Cheese', 5),
+      ]
     ),
     new Recipe(
-      'Pizza2',
+      'Kebabpizza',
       'Its yummy',
-      'https://emvwr2994ad.exactdn.com/wp-content/uploads/2021/10/bast-finpizza-stockholm.jpg?strip=all&lossy=1&quality=77&resize=795%2C480&ssl=1'
+      'https://emvwr2994ad.exactdn.com/wp-content/uploads/2021/10/bast-finpizza-stockholm.jpg?strip=all&lossy=1&quality=77&resize=795%2C480&ssl=1',
+      [
+        new Ingredient('Tomato Sauce', 4),
+        new Ingredient('Kebab meat', 4),
+        new Ingredient('Lettuce', 2),
+        new Ingredient('Tomato', 1),
+        new Ingredient('Kebab Sauce', 3),
+      ]
     ),
   ];
 
