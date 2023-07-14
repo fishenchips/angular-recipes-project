@@ -9,10 +9,9 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
   providedIn: 'root',
 })
 export class RecipeService {
-  //  recipeSelected = new Subject<Recipe>();
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Array<Recipe> = [
+  /* private recipes: Array<Recipe> = [
     new Recipe(
       'Vesuvio',
       'Its yummy',
@@ -36,6 +35,8 @@ export class RecipeService {
       ]
     ),
   ];
+ */
+  private recipes: Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {}
 
