@@ -13,6 +13,6 @@ export class HeaderComponent {
   }
 
   getRecipes() {
-    this.dataStorage.getRecipes();
+    this.dataStorage.getRecipes().subscribe();
   }
 }
